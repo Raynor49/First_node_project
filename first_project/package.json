@@ -1,0 +1,17 @@
+{
+  "name": "first_project",
+  "version": "1.0.0",
+  "description": "My introduction to trying to learn Node.js",
+  "main": "animal_fun.js",
+  "dependencies": {
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon animal_fun.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
