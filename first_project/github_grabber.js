@@ -9,3 +9,5 @@ const githubServer = http.createServer((req, res) => {
   }
   res.end("Danger, not a POST request")
 })
+
+githubServer.listen(8000, () => console.log('listening to 8k')
