@@ -1,5 +1,5 @@
 const fs = require('fs')
-const querystring = require('querystring')
+const qs = require('querystring')
 const https = require('https')
 const http = require('http')
 
@@ -15,6 +15,7 @@ const githubServer = http.createServer((req, res) => {
     })
 
   }
+  res.end("here ya go")
 })
 
 githubServer.listen(8000, () => console.log('listening to 8k'))
