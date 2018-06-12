@@ -5,9 +5,16 @@ const http = require('http')
 
 const githubServer = http.createServer((req, res) => {
   if (req.method == 'POST'){
-    res.end("I'm a POST request")
+    let info = ''
+    req.on('data', d => {
+      info += d
+    })
+    req.on('end', () => {
+      const username = qs.parse(info).username
+      res.end(username)
+    })
+
   }
-  res.end("Danger, not a POST request")
 })
 
-githubServer.listen(8000, () => console.log('listening to 8k')
+githubServer.listen(8000, () => console.log('listening to 8k'))
